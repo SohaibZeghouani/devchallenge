@@ -1,0 +1,100 @@
+:root {
+  --grid-gap: 32px;
+  --grid-margin: 72px;
+  --columns: 12;
+
+  /* Colors for the tasks */
+  --color-task-in-progress: #F5D565;
+  --color-task-completed: #A0ECB1;
+  --color-task-wont-do: #F7D4D3;
+  --color-task-to-do: #E3E8EF;
+  --color-add-new-task: #F5E8D5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: white;
+}
+
+.task-board-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--grid-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.board-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.board-description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-gap: var(--grid-gap);
+}
+
+.task-card {
+  display: flex;
+  min-width: 500px;
+  align-items: center;
+  padding: 1rem;
+  margin: 1em;
+  border-radius: 10px;
+  grid-column: span 6; /* Adjust width of task card */
+}
+
+.task-card .task-icon {
+  font-size: 1.5rem;
+  padding: 0.5em;
+  background: white;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+.task-add-icon {
+  background: #E9A23B !important;
+}
+.task-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Task Colors */
+.task-in-progress {
+  background-color: var(--color-task-in-progress);
+}
+
+.task-completed {
+  background-color: var(--color-task-completed);
+}
+
+.task-wont-do {
+  background-color: var(--color-task-wont-do);
+}
+
+.task-to-do {
+  background-color: var(--color-task-to-do);
+}
+
+.add-new-task {
+  background-color: var(--color-add-new-task);
+}
+
+.task-description {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}

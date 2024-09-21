@@ -1,0 +1,30 @@
+<div class="task-board-container">
+  <div>
+    <h1 id="to-do-or-not-to-do-list" class="title">To do or not to do list</h1>
+    <p>{{ currentDate | date:'d MMMM yyyy' }}</p>
+  </div>
+
+  <div class="section task-list">
+    <ng-container *ngFor="let task of tasks">
+      <div class="task-card" [ngClass]="task.status" (click)="editTask(task)">
+        <span class="task-icon">{{ getIconForStatus(task.status) }}</span>
+        <h3 class="task-title">{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+      </div>
+    </ng-container>
+
+    <div class="task-card add-new-task" (click)="addTask()">
+      <span class="task-icon task-add-icon">+</span>
+      <h3 class="task-title">Nouvelle tâche</h3>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <app-task-modal 
+    [isVisible]="isModalVisible" 
+    [task]="selectedTask" 
+    (save)="handleSaveTask($event)" 
+    (cancel)="closeModal()" 
+    (delete)="deleteTask($event)">
+  </app-task-modal>
+</div>

@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+:root {
+  /* Font sizes */
+  --font-title: 2.5rem; /* 40px */
+  --font-description: 1rem; /* 16px */
+  --font-task-title: 1.25rem; /* 20px */
+  --font-task-button: 1rem; /* 16px */
+  --font-button-text: 0.875rem; /* 14px */
+  --font-input-label: 0.75rem; /* 12px */
+  
+  /* Font weights */
+  --font-regular: 400;
+  --font-light: 300;
+  --font-semibold: 600;
+  --font-medium: 500;
+  
+  /* Font family */
+  --font-family: 'Outfit', sans-serif;
+    /* Task Colors */
+  --color-task-in-progress: #F5D565;
+  --color-task-completed: #A0ECB1;
+  --color-task-wont-do: #F7D4D3;
+  --color-task-to-do: #E3E8EF;
+  --color-add-new-task: #F5E8D5;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Title */
+h1, .title {
+  font-size: var(--font-title);
+  font-weight: var(--font-regular);
+}
+
+/* Description */
+p, .description {
+  font-size: var(--font-description);
+  font-weight: var(--font-regular);
+}
+
+/* Task title */
+.task-title {
+  font-size: var(--font-task-title);
+  font-weight: var(--font-semibold);
+}
+
+/* Task button */
+.task-button {
+  font-size: var(--font-task-button);
+  font-weight: var(--font-semibold);
+}
+
+/* Button text */
+button, .button-text {
+  font-size: var(--font-button-text);
+  font-weight: var(--font-medium);
+}
+
+/* Input label */
+label, .input-label {
+  font-size: var(--font-input-label);
+  font-weight: var(--font-medium);
+}

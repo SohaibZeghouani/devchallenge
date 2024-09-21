@@ -1,0 +1,51 @@
+<div class="modal" *ngIf="isVisible">
+  <div class="modal-content">
+    <h2>{{ task._id ? 'Edit Task' : 'New Task' }}</h2>
+
+    <!-- Task Title -->
+    <label for="taskTitle">Title</label>
+    <input [(ngModel)]="task.title" id="taskTitle" placeholder="Task title" />
+
+    <!-- Task Description -->
+    <label for="taskDescription">Description</label>
+    <textarea [(ngModel)]="task.description" id="taskDescription" placeholder="Task description"></textarea>
+
+    <!-- Task Status -->
+    <div class="task-status">
+      <label>Status</label>
+      <div>
+        <label>
+          <input type="radio" [(ngModel)]="task.status" value="to-do" /> To Do
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="task.status" value="in-progress" /> In Progress
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="task.status" value="completed" /> Completed
+        </label>
+        <label>
+          <input type="radio" [(ngModel)]="task.status" value="wont-do" /> Won't Do
+        </label>
+      </div>
+    </div>
+
+    <!-- Task Icon -->
+    <div class="task-icon">
+      <label>Icon</label>
+      <div class="icon-options">
+        <span *ngFor="let status of ['to-do', 'in-progress', 'completed', 'wont-do']">
+      <button (click)="task.status = status">{{ status }}</button>
+        </span>
+      </div>
+    </div>
+
+    <!-- Save and Cancel Buttons -->
+    <div class="modal-actions">
+        <button *ngIf="task._id" (click)="onDelete()">Delete</button>
+
+      <button (click)="onCancel()">Cancel</button>
+      <button (click)="onSave()">Save</button>
+
+    </div>
+  </div>
+</div>

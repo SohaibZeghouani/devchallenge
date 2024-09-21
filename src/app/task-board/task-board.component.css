@@ -1,0 +1,51 @@
+.task-card {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.task-card.to-do {
+  background-color: var(--color-task-to-do);
+}
+
+.task-card.in-progress {
+  background-color: var(--color-task-in-progress);
+}
+
+.task-card.completed {
+  background-color: var(--color-task-completed);
+}
+
+.task-card.wont-do {
+  background-color: var(--color-task-wont-do);
+}
+
+.task-card.add-new-task {
+  background-color: var(--color-add-new-task);
+}
+
+.task-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.task-actions {
+  margin-top: 1rem;
+}
+  
+.task-actions button {
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
